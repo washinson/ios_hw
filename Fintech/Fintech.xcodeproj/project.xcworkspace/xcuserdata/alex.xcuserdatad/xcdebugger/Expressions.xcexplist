@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ViewController.requestQuote(for:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "&quot;https://iextrading.com/stock/\(symbol)/quote?token=pk_4df4c857b5fe48fcb8b8d324d199c4f6&quot;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ViewController.requestQuote(for:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(response as? HTTPURLResponse)?.statusCode">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
