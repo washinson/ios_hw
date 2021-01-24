@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Trip View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TripCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TripViewController" customModule="TripCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4j1-7v-k8e">
-                                <rect key="frame" x="0.0" y="148" width="414" height="600"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="528"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="10" id="chs-jm-NgT">
                                     <size key="itemSize" width="250" height="380"/>
@@ -26,8 +26,8 @@
                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Blf-pV-tZ7">
-                                        <rect key="frame" x="20" y="110" width="250" height="380"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Blf-pV-tZ7" customClass="TripCollectionViewCell" customModule="TripCard" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="74" width="250" height="380"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TCY-wR-7ll">
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="380"/>
@@ -37,17 +37,20 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="250" height="311"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UPY-hk-Dz4">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPY-hk-Dz4">
                                                     <rect key="frame" x="0.0" y="311" width="250" height="69"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeg-D0-bLi">
-                                                            <rect key="frame" x="91" y="6.5" width="69" height="56"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeg-D0-bLi">
+                                                            <rect key="frame" x="90.666666666666671" y="6.6666666666666856" width="69.000000000000014" height="56"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="69" id="SNP-lX-XXI"/>
                                                                 <constraint firstAttribute="height" constant="56" id="q87-DP-Mr9"/>
                                                             </constraints>
                                                             <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="heart" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="likeButtonTappedWithSender:" destination="Blf-pV-tZ7" eventType="touchUpInside" id="Ohl-6c-nbR"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -57,7 +60,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVa-oN-NAk">
-                                                    <rect key="frame" x="109.5" y="56" width="31" height="21"/>
+                                                    <rect key="frame" x="109.66666666666667" y="56" width="31.000000000000014" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -69,13 +72,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ull-7U-0Ar">
-                                                    <rect key="frame" x="101.5" y="114" width="47" height="26"/>
+                                                    <rect key="frame" x="101.66666666666667" y="114" width="47.000000000000014" height="26"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGP-l3-T7T">
-                                                    <rect key="frame" x="98.5" y="148" width="53" height="29"/>
+                                                    <rect key="frame" x="98.666666666666671" y="148" width="53.000000000000014" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -85,42 +88,58 @@
                                             <constraints>
                                                 <constraint firstItem="OgM-7k-gOh" firstAttribute="centerX" secondItem="sVa-oN-NAk" secondAttribute="centerX" id="ByX-5j-Bgb"/>
                                                 <constraint firstItem="qcB-Pq-ZdG" firstAttribute="top" secondItem="sVa-oN-NAk" secondAttribute="bottom" constant="-77" id="DQ0-9L-6wN"/>
+                                                <constraint firstAttribute="bottom" secondItem="UPY-hk-Dz4" secondAttribute="bottom" id="J96-KJ-HLN"/>
                                                 <constraint firstItem="OgM-7k-gOh" firstAttribute="top" secondItem="sVa-oN-NAk" secondAttribute="bottom" constant="8" id="Pjv-8d-tpP"/>
                                                 <constraint firstItem="UPY-hk-Dz4" firstAttribute="top" secondItem="qcB-Pq-ZdG" secondAttribute="bottom" id="S1D-po-djC"/>
                                                 <constraint firstItem="Ull-7U-0Ar" firstAttribute="centerX" secondItem="OgM-7k-gOh" secondAttribute="centerX" id="V4I-EE-QuQ"/>
+                                                <constraint firstItem="UPY-hk-Dz4" firstAttribute="trailing" secondItem="qcB-Pq-ZdG" secondAttribute="trailing" id="V55-hO-PVU"/>
                                                 <constraint firstItem="FGP-l3-T7T" firstAttribute="centerX" secondItem="Ull-7U-0Ar" secondAttribute="centerX" id="dW6-B9-uDe"/>
                                                 <constraint firstItem="sVa-oN-NAk" firstAttribute="centerX" secondItem="qcB-Pq-ZdG" secondAttribute="centerX" id="hng-gl-eZG"/>
                                                 <constraint firstItem="FGP-l3-T7T" firstAttribute="top" secondItem="Ull-7U-0Ar" secondAttribute="bottom" constant="8" id="jUC-Z4-HOk"/>
                                                 <constraint firstItem="Ull-7U-0Ar" firstAttribute="top" secondItem="OgM-7k-gOh" secondAttribute="bottom" constant="8" id="lmK-gV-Mal"/>
+                                                <constraint firstItem="UPY-hk-Dz4" firstAttribute="leading" secondItem="qcB-Pq-ZdG" secondAttribute="leading" id="o2h-qp-pv0"/>
                                                 <constraint firstItem="UPY-hk-Dz4" firstAttribute="height" secondItem="qcB-Pq-ZdG" secondAttribute="height" multiplier="4.5" constant="-1330.5" id="wqp-fM-Oxs"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityLabel" destination="sVa-oN-NAk" id="T7v-rS-eEs"/>
+                                            <outlet property="collectionView" destination="4j1-7v-k8e" id="Td1-Tl-kun"/>
+                                            <outlet property="countryLabel" destination="OgM-7k-gOh" id="YoZ-yY-4Nh"/>
+                                            <outlet property="imageView" destination="qcB-Pq-ZdG" id="AyE-fQ-ru0"/>
+                                            <outlet property="likeButton" destination="xeg-D0-bLi" id="mZl-8K-odA"/>
+                                            <outlet property="priceLabel" destination="FGP-l3-T7T" id="3zp-vk-ZQd"/>
+                                            <outlet property="totalDaysLabel" destination="Ull-7U-0Ar" id="yz6-t2-aMK"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5NM-Qj-AvA"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="BZ5-hL-m0p"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Popular Destinations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFO-NM-Z4j">
-                                <rect key="frame" x="4" y="52" width="247" height="73"/>
+                                <rect key="frame" x="4" y="8" width="247" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="73" id="FY7-9h-g43"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="247" id="rDG-5i-yrX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRIPCARD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xv1-rT-hUk">
-                                <rect key="frame" x="7" y="858.5" width="81" height="20.5"/>
+                                <rect key="frame" x="7" y="708.66666666666663" width="81" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.58458402121980146" green="0.66363744460260787" blue="0.89803921568627454" alpha="0.30262433978873238" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xv1-rT-hUk" secondAttribute="trailing" id="0Be-ga-nq1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eFO-NM-Z4j" secondAttribute="trailing" id="1F0-26-4px"/>
-                            <constraint firstItem="xv1-rT-hUk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="17" id="3OB-Th-8fV"/>
                             <constraint firstItem="eFO-NM-Z4j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="9Tv-Cf-e3q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xv1-rT-hUk" secondAttribute="bottom" constant="7" id="BWN-Ac-uKv"/>
                             <constraint firstItem="4j1-7v-k8e" firstAttribute="top" secondItem="eFO-NM-Z4j" secondAttribute="bottom" constant="23" id="DyN-Vu-GL4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4j1-7v-k8e" secondAttribute="trailing" id="F9g-I1-d9K"/>
                             <constraint firstItem="4j1-7v-k8e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a0a-gq-soV"/>
@@ -131,6 +150,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="4j1-7v-k8e" id="pyu-kV-cml"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
