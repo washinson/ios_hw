@@ -42,6 +42,7 @@
                                 <rect key="frame" x="16" y="78" width="170" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="1TV-FO-6VZ"/>
+                                    <constraint firstAttribute="width" constant="170" id="aK2-gR-Yts"/>
                                 </constraints>
                                 <state key="normal" image="facebook"/>
                                 <userDefinedRuntimeAttributes>
@@ -57,9 +58,9 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAW-V2-wFW" customClass="FancyButton" customModule="FancyButton" customModuleProvider="target">
-                                <rect key="frame" x="59" y="154" width="84" height="77"/>
+                                <rect key="frame" x="59" y="154" width="84" height="84"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="77" id="XlJ-Hf-OIa"/>
+                                    <constraint firstAttribute="height" constant="84" id="XlJ-Hf-OIa"/>
                                     <constraint firstAttribute="width" constant="84" id="oay-Zj-8Yj"/>
                                 </constraints>
                                 <state key="normal" image="facebook"/>
@@ -76,9 +77,10 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCH-cl-IYg" customClass="FancyButton" customModule="FancyButton" customModuleProvider="target">
-                                <rect key="frame" x="194" y="78" width="165" height="69"/>
+                                <rect key="frame" x="193" y="78" width="166" height="69"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="165" id="GHr-Pz-s39"/>
+                                    <constraint firstAttribute="width" constant="166" id="Cpf-Es-aRs"/>
+                                    <constraint firstAttribute="height" constant="69" id="qNP-lp-HDh"/>
                                 </constraints>
                                 <state key="normal" image="twitter"/>
                                 <userDefinedRuntimeAttributes>
@@ -94,7 +96,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nJ-kh-sQq" customClass="FancyButton" customModule="FancyButton" customModuleProvider="target">
-                                <rect key="frame" x="10" y="240" width="355" height="69"/>
+                                <rect key="frame" x="10" y="247" width="355" height="69"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="SIGN IN WITH FACEBOOK" image="facebook">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,7 +114,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eld-an-hHK" customClass="FancyButton" customModule="FancyButton" customModuleProvider="target">
-                                <rect key="frame" x="10" y="317" width="355" height="70"/>
+                                <rect key="frame" x="10" y="324" width="355" height="70"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="lTx-MF-eHg"/>
@@ -132,7 +134,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygw-aL-6WM" customClass="FancyButton" customModule="FancyButton" customModuleProvider="target">
-                                <rect key="frame" x="10" y="395" width="355" height="57"/>
+                                <rect key="frame" x="10" y="402" width="355" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="Vlq-js-cXF"/>
                                 </constraints>
@@ -153,10 +155,10 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlc-yo-0OO" customClass="FancyButton" customModule="FancyButton" customModuleProvider="target">
-                                <rect key="frame" x="234" y="154" width="85" height="77"/>
+                                <rect key="frame" x="234" y="154" width="84" height="84"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="5hr-K0-m4a"/>
-                                    <constraint firstAttribute="height" constant="77" id="QTo-lQ-POt"/>
+                                    <constraint firstAttribute="width" constant="84" id="5hr-K0-m4a"/>
+                                    <constraint firstAttribute="height" constant="84" id="QTo-lQ-POt"/>
                                 </constraints>
                                 <state key="normal" image="twitter"/>
                                 <userDefinedRuntimeAttributes>
@@ -174,32 +176,30 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="8GU-8N-1rh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="00n-09-fVm"/>
                             <constraint firstItem="0nJ-kh-sQq" firstAttribute="leading" secondItem="Eld-an-hHK" secondAttribute="leading" id="032-ZR-HmF"/>
                             <constraint firstItem="sf7-b5-mua" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="0fK-eO-pue"/>
+                            <constraint firstItem="zlc-yo-0OO" firstAttribute="top" secondItem="xCH-cl-IYg" secondAttribute="bottom" constant="7" id="2sr-74-ShH"/>
+                            <constraint firstItem="xCH-cl-IYg" firstAttribute="leading" secondItem="8GU-8N-1rh" secondAttribute="trailing" constant="7" id="9HJ-SK-jo7"/>
                             <constraint firstItem="0nJ-kh-sQq" firstAttribute="top" secondItem="fAW-V2-wFW" secondAttribute="bottom" constant="9" id="AAT-Ti-i9N"/>
-                            <constraint firstItem="xCH-cl-IYg" firstAttribute="centerX" secondItem="zlc-yo-0OO" secondAttribute="centerX" id="AoJ-RJ-h3I"/>
-                            <constraint firstItem="fAW-V2-wFW" firstAttribute="top" secondItem="zlc-yo-0OO" secondAttribute="top" id="B4S-8h-Gvd"/>
                             <constraint firstItem="Eld-an-hHK" firstAttribute="trailing" secondItem="ygw-aL-6WM" secondAttribute="trailing" id="Cq2-zD-D2B"/>
-                            <constraint firstItem="zlc-yo-0OO" firstAttribute="leading" secondItem="fAW-V2-wFW" secondAttribute="trailing" constant="91" id="DEC-kl-TCH"/>
-                            <constraint firstItem="xCH-cl-IYg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ECw-Nd-MTe"/>
+                            <constraint firstItem="zlc-yo-0OO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fAW-V2-wFW" secondAttribute="trailing" constant="1" id="DEC-kl-TCH"/>
                             <constraint firstItem="sf7-b5-mua" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="0nJ-kh-sQq" secondAttribute="trailing" id="FdU-wa-ldo"/>
                             <constraint firstItem="Eld-an-hHK" firstAttribute="leading" secondItem="ygw-aL-6WM" secondAttribute="leading" id="Ffg-xe-Bc5"/>
                             <constraint firstItem="ygw-aL-6WM" firstAttribute="top" secondItem="Eld-an-hHK" secondAttribute="bottom" constant="8" id="Hly-Vq-STq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ygw-aL-6WM" secondAttribute="bottom" constant="215" id="Jdq-LY-jCd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ygw-aL-6WM" secondAttribute="bottom" id="Jdq-LY-jCd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zlc-yo-0OO" secondAttribute="trailing" constant="57" id="K8q-hA-rP8"/>
                             <constraint firstItem="8GU-8N-1rh" firstAttribute="top" secondItem="sf7-b5-mua" secondAttribute="bottom" constant="8" id="MzE-1y-oSi"/>
                             <constraint firstItem="sf7-b5-mua" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Py3-n4-dHB"/>
-                            <constraint firstItem="8GU-8N-1rh" firstAttribute="centerX" secondItem="fAW-V2-wFW" secondAttribute="centerX" id="QKX-ji-Upm"/>
+                            <constraint firstItem="xCH-cl-IYg" firstAttribute="top" secondItem="sf7-b5-mua" secondAttribute="bottom" constant="8" id="Uwe-oh-53s"/>
                             <constraint firstItem="sf7-b5-mua" firstAttribute="leading" secondItem="0nJ-kh-sQq" secondAttribute="leading" id="UxE-Ei-sRE"/>
-                            <constraint firstItem="8GU-8N-1rh" firstAttribute="centerY" secondItem="xCH-cl-IYg" secondAttribute="centerY" id="WEk-Lv-Cxg"/>
                             <constraint firstItem="fAW-V2-wFW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="aJO-dj-dJ6"/>
                             <constraint firstItem="fAW-V2-wFW" firstAttribute="top" secondItem="8GU-8N-1rh" secondAttribute="bottom" constant="7" id="ad2-DZ-toU"/>
+                            <constraint firstItem="0nJ-kh-sQq" firstAttribute="top" secondItem="zlc-yo-0OO" secondAttribute="bottom" constant="9" id="bwZ-bq-gad"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xCH-cl-IYg" secondAttribute="trailing" constant="16" id="cdF-oq-qRe"/>
                             <constraint firstItem="0nJ-kh-sQq" firstAttribute="trailing" secondItem="Eld-an-hHK" secondAttribute="trailing" id="eN9-IR-A5p"/>
-                            <constraint firstItem="xCH-cl-IYg" firstAttribute="leading" secondItem="8GU-8N-1rh" secondAttribute="trailing" constant="8" id="lb6-Sc-kS0"/>
-                            <constraint firstItem="8GU-8N-1rh" firstAttribute="top" secondItem="xCH-cl-IYg" secondAttribute="top" id="maC-gn-n2P"/>
                             <constraint firstItem="Eld-an-hHK" firstAttribute="top" secondItem="0nJ-kh-sQq" secondAttribute="bottom" constant="8" id="r5D-wf-OKp"/>
-                            <constraint firstItem="fAW-V2-wFW" firstAttribute="bottom" secondItem="zlc-yo-0OO" secondAttribute="bottom" id="rjg-nw-YjO"/>
                             <constraint firstItem="sf7-b5-mua" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xG7-FD-Dz7"/>
+                            <constraint firstItem="8GU-8N-1rh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zUe-Sh-ed7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
