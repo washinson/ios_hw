@@ -57,7 +57,7 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot your password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dC6-H1-iBk">
-                                        <rect key="frame" x="46" y="183" width="148" height="17"/>
+                                        <rect key="frame" x="46.5" y="183" width="148" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="17" id="mVW-qk-F61"/>
                                         </constraints>
@@ -92,7 +92,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="OhU-VL-DJn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="1Ik-IL-ZNo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OhU-VL-DJn" secondAttribute="bottom" constant="397" id="E82-YX-ph1"/>
                             <constraint firstItem="y1a-qb-0B9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PIM-lb-PkB"/>
                             <constraint firstItem="y1a-qb-0B9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RSl-QJ-hhr"/>
                             <constraint firstItem="y1a-qb-0B9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Swb-MG-8Fb"/>
