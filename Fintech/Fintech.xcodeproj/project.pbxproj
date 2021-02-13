@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAEA5DB125D8304D0040032F /* StickerApp StickerPackExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FAEA5DB025D8304D0040032F /* StickerApp StickerPackExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FAEA5DB525D8304D0040032F /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = FAEA5DB425D8304D0040032F /* Stickers.xcstickers */; };
+		FAEA5DB625D8304D0040032F /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = FAEA5DB425D8304D0040032F /* Stickers.xcstickers */; };
 		FAF928292586139E0038656B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF928282586139E0038656B /* AppDelegate.swift */; };
 		FAF9282B2586139E0038656B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9282A2586139E0038656B /* SceneDelegate.swift */; };
 		FAF9282D2586139E0038656B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9282C2586139E0038656B /* ViewController.swift */; };
@@ -15,7 +18,34 @@
 		FAF92835258613A00038656B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF92833258613A00038656B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FAEA5DB225D8304D0040032F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAF9281D2586139E0038656B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAEA5DAF25D8304D0040032F;
+			remoteInfo = "StickerApp StickerPackExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAEA5DB925D8304D0040032F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FAEA5DB125D8304D0040032F /* StickerApp StickerPackExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		FAEA5DAD25D8304D0040032F /* StickerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEA5DB025D8304D0040032F /* StickerApp StickerPackExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "StickerApp StickerPackExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEA5DB425D8304D0040032F /* Stickers.xcstickers */ = {isa = PBXFileReference; lastKnownFileType = folder.stickers; name = Stickers.xcstickers; path = "StickerApp StickerPackExtension/Stickers.xcstickers"; sourceTree = "<group>"; };
 		FAF928252586139E0038656B /* Fintech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fintech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF928282586139E0038656B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF9282A2586139E0038656B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +70,7 @@
 		FAF9281C2586139E0038656B = {
 			isa = PBXGroup;
 			children = (
+				FAEA5DB425D8304D0040032F /* Stickers.xcstickers */,
 				FAF928272586139E0038656B /* Fintech */,
 				FAF928262586139E0038656B /* Products */,
 			);
@@ -49,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				FAF928252586139E0038656B /* Fintech.app */,
+				FAEA5DAD25D8304D0040032F /* StickerApp.app */,
+				FAEA5DB025D8304D0040032F /* StickerApp StickerPackExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +103,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FAEA5DAC25D8304D0040032F /* StickerApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAEA5DBD25D8304D0040032F /* Build configuration list for PBXNativeTarget "StickerApp" */;
+			buildPhases = (
+				FAEA5DAB25D8304D0040032F /* Resources */,
+				FAEA5DB925D8304D0040032F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAEA5DB325D8304D0040032F /* PBXTargetDependency */,
+			);
+			name = StickerApp;
+			productName = StickerApp;
+			productReference = FAEA5DAD25D8304D0040032F /* StickerApp.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		FAEA5DAF25D8304D0040032F /* StickerApp StickerPackExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAEA5DBC25D8304D0040032F /* Build configuration list for PBXNativeTarget "StickerApp StickerPackExtension" */;
+			buildPhases = (
+				FAEA5DAE25D8304D0040032F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StickerApp StickerPackExtension";
+			productName = "StickerApp StickerPackExtension";
+			productReference = FAEA5DB025D8304D0040032F /* StickerApp StickerPackExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 		FAF928242586139E0038656B /* Fintech */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAF92839258613A10038656B /* Build configuration list for PBXNativeTarget "Fintech" */;
@@ -97,6 +162,12 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = washinson;
 				TargetAttributes = {
+					FAEA5DAC25D8304D0040032F = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					FAEA5DAF25D8304D0040032F = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					FAF928242586139E0038656B = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -116,11 +187,29 @@
 			projectRoot = "";
 			targets = (
 				FAF928242586139E0038656B /* Fintech */,
+				FAEA5DAC25D8304D0040032F /* StickerApp */,
+				FAEA5DAF25D8304D0040032F /* StickerApp StickerPackExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FAEA5DAB25D8304D0040032F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEA5DB625D8304D0040032F /* Stickers.xcstickers in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAEA5DAE25D8304D0040032F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEA5DB525D8304D0040032F /* Stickers.xcstickers in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAF928232586139E0038656B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,6 +235,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FAEA5DB325D8304D0040032F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAEA5DAF25D8304D0040032F /* StickerApp StickerPackExtension */;
+			targetProxy = FAEA5DB225D8304D0040032F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		FAF9282E2586139E0038656B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -166,6 +263,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FAEA5DB725D8304D0040032F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YVF29YMA26;
+				INFOPLIST_FILE = StickerApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.washinson.StickerApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAEA5DB825D8304D0040032F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YVF29YMA26;
+				INFOPLIST_FILE = StickerApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.washinson.StickerApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FAEA5DBA25D8304D0040032F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YVF29YMA26;
+				INFOPLIST_FILE = "StickerApp StickerPackExtension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.washinson.StickerApp.StickerPackExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAEA5DBB25D8304D0040032F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YVF29YMA26;
+				INFOPLIST_FILE = "StickerApp StickerPackExtension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.washinson.StickerApp.StickerPackExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FAF92837258613A10038656B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -319,6 +474,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FAEA5DBC25D8304D0040032F /* Build configuration list for PBXNativeTarget "StickerApp StickerPackExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAEA5DBA25D8304D0040032F /* Debug */,
+				FAEA5DBB25D8304D0040032F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAEA5DBD25D8304D0040032F /* Build configuration list for PBXNativeTarget "StickerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAEA5DB725D8304D0040032F /* Debug */,
+				FAEA5DB825D8304D0040032F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FAF928202586139E0038656B /* Build configuration list for PBXProject "Fintech" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
