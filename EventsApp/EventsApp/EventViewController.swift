@@ -37,7 +37,7 @@ class EventViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         event!.note = text.text
         event!.status = statuses[status.selectedRow(inComponent: 0)]
         
-        EventViewController.saveContext(container: container)
+        saveContext(container: container)
         
         navigationController?.popViewController(animated: true)
     }
@@ -82,16 +82,6 @@ class EventViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         }
         
         return true
-    }
-    
-    static func saveContext(container: NSPersistentContainer) {
-        if container.viewContext.hasChanges {
-            do {
-                try container.viewContext.save()
-            } catch {
-                print("An error occurred while saving: \(error)")
-            }
-        }
     }
 
     /*

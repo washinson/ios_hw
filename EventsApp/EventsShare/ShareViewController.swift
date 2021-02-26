@@ -7,32 +7,104 @@
 //
 
 import UIKit
-import Social
+import MobileCoreServices
+import CoreData
 
-class ShareViewController: SLComposeServiceViewController {
+@objc(ShareExtensionViewController)
+class ShareViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    let keyTextEvents = "textEvents"
+    @IBOutlet weak var label: UITextField!
+    @IBOutlet weak var text: UITextView!
+    @IBOutlet weak var status: UIPickerView!
+    @IBOutlet weak var date: UIDatePicker!
+
+    var container: NSPersistentContainer!
     
-    override func isContentValid() -> Bool {
-        // Do validation of contentText and/or NSExtensionContext attachments here
+    let statuses = ["New", "In progress", "Successful"]
+    
+    @IBAction func create(_ sender: Any) {
+        if (!inputDidTappedCorrect()) {
+            return
+        }
+        
+        let event = Event(context: container.viewContext)
+        
+        event.date = date.date
+        event.title = label.text ?? ""
+        event.note = text.text
+        event.status = statuses[status.selectedRow(inComponent: 0)]
+        
+        saveContext(container: container)
+        
+        extensionContext?.completeRequest(returningItems: nil, completionHandler: nil)
+    }
+    @IBAction func cancel(_ sender: Any) {
+        extensionContext?.completeRequest(returningItems: nil, completionHandler: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        container = NSPersistentContainer(name: "EventsApp")
+        
+        let storeURL = URL.storeURL(for: "group.events.core.data", databaseName: "Events")
+        let storeDescription = NSPersistentStoreDescription(url: storeURL)
+        container.persistentStoreDescriptions = [storeDescription]
+        
+        container.loadPersistentStores { storeDescription, error in
+            self.container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+            if let error = error {
+                print("Unresolved error \(error)")
+            }
+        }
+        
+        status.delegate = self
+        status.dataSource = self
+        status.selectRow(1, inComponent: 0, animated: false)
+        
+        self.handleSharedFile()
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return statuses.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return statuses[row]
+    }
+    
+    func inputDidTappedCorrect() -> Bool {
+        if (label.text?.isEmpty != false) {
+            label.backgroundColor = .red
+            return false
+        } else {
+            label.backgroundColor = .white
+        }
+        
         return true
     }
-
-    override func didSelectPost() {
-        // This is called after the user selects Post. Do the upload of contentText and/or NSExtensionContext attachments.
-        let userDefaults = UserDefaults(suiteName: "group.events.core.data")!
-        var textEvents = userDefaults.stringArray(forKey: keyTextEvents) ?? [String]()
-        textEvents.append(contentText)
-        
-        userDefaults.set(textEvents, forKey: keyTextEvents)
     
-        // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
-        self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
+    private func handleSharedFile() {
+        // extracting the path to the URL that is being shared
+        let attachments = (self.extensionContext?.inputItems.first as? NSExtensionItem)?.attachments ?? []
+        let contentType = kUTTypeData as String
+        for provider in attachments {
+            // Check if the content type is the same as we expected
+            if provider.hasItemConformingToTypeIdentifier(contentType) {
+                provider.loadItem(forTypeIdentifier: contentType, options: nil) { [unowned self] (data, error) in
+                    // Handle the error here if you want
+                    guard error == nil else { return }
+                    
+                    if let text = data as? String {
+                        self.text.text = text
+                    } else {
+                        fatalError("Impossible to get text")
+                    }
+                }}
+        }
     }
-
-    override func configurationItems() -> [Any]! {
-        // To add configuration options via table cells at the bottom of the sheet, return an array of SLComposeSheetConfigurationItem here.
-        return []
-    }
-
 }

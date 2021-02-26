@@ -52,6 +52,10 @@ class EventsTableViewController: UITableViewController {
 
         container = NSPersistentContainer(name: "EventsApp")
         
+        let storeURL = URL.storeURL(for: "group.events.core.data", databaseName: "Events")
+        let storeDescription = NSPersistentStoreDescription(url: storeURL)
+        container.persistentStoreDescriptions = [storeDescription]
+        
         container.loadPersistentStores { storeDescription, error in
             self.container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
             if let error = error {
@@ -89,7 +93,6 @@ class EventsTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        addSharedEvents()
         loadSavedData()
     }
     
@@ -105,20 +108,6 @@ class EventsTableViewController: UITableViewController {
         }
     }
 
-    func addSharedEvents() {
-        let userDefaults = UserDefaults(suiteName: "group.events.core.data")!
-        let array = userDefaults.stringArray(forKey: "textEvents") ?? [String]()
-        for eventText in array {
-            let event = Event(context: container.viewContext)
-            event.date = Date()
-            event.title = "Event"
-            event.note = eventText
-            event.status = "Now"
-        }
-        userDefaults.set(nil, forKey: keyTextEvents)
-        EventViewController.saveContext(container: container)
-    }
-    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -169,3 +158,5 @@ class EventsTableViewController: UITableViewController {
     
 
 }
+
+
