@@ -17,11 +17,20 @@ class EventViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     var event: Event? = nil
     
+    @IBOutlet weak var delete: UIButton!
     @IBOutlet weak var update: UIButton!
     @IBOutlet weak var status: UIPickerView!
     @IBOutlet weak var date: UIDatePicker!
     @IBOutlet weak var text: UITextView!
     @IBOutlet weak var label: UITextField!
+    
+    @IBAction func deleteEvent(_ sender: Any) {
+        if (event != nil) {
+            container.viewContext.delete(event!)
+            saveContext(container: container)
+            navigationController?.popViewController(animated: true)
+        }
+    }
     
     @IBAction func updateEvent(_ sender: Any) {
         if (!inputDidTappedCorrect()) {
@@ -58,6 +67,7 @@ class EventViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             label.text = event?.title
             text.text = event?.note
             update.setTitle("Update", for: .normal)
+            delete.isHidden = false
         }
     }
     
@@ -83,15 +93,5 @@ class EventViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         return true
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
