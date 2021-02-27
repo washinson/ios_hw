@@ -17,7 +17,7 @@ class EventViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     var event: Event? = nil
     
-    @IBOutlet weak var update: UIBarButtonItem!
+    @IBOutlet weak var update: UIButton!
     @IBOutlet weak var status: UIPickerView!
     @IBOutlet weak var date: UIDatePicker!
     @IBOutlet weak var text: UITextView!
@@ -57,7 +57,7 @@ class EventViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             }
             label.text = event?.title
             text.text = event?.note
-            update.title = "Update"
+            update.setTitle("Update", for: .normal)
         }
     }
     

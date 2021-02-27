@@ -15,46 +15,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v79-xp-ge8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v79-xp-ge8">
                                 <rect key="frame" x="313" y="0.0" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
                                     <action selector="create:" destination="JdA-mG-pYw" eventType="touchUpInside" id="igJ-P4-a20"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aC-g5-V7a">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aC-g5-V7a">
                                 <rect key="frame" x="16" y="0.0" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancel:" destination="JdA-mG-pYw" eventType="touchUpInside" id="7An-C5-d4z"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ftz-Jl-PT0">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ftz-Jl-PT0">
                                 <rect key="frame" x="0.0" y="38" width="375" height="65"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="dzj-Lk-oER"/>
+                                </constraints>
                             </datePicker>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EqQ-SA-Y09">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EqQ-SA-Y09">
                                 <rect key="frame" x="0.0" y="111" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="dpd-0D-Wcq"/>
+                                </constraints>
                             </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Label" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gmf-ac-7UF">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Label" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gmf-ac-7UF">
                                 <rect key="frame" x="16" y="175" width="343" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FjF-ZH-k1G">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FjF-ZH-k1G">
                                 <rect key="frame" x="16" y="217" width="343" height="430"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.92403632614213194" green="0.92403632614213194" blue="0.92403632614213194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3aC-g5-V7a" firstAttribute="leading" secondItem="gmf-ac-7UF" secondAttribute="leading" id="1Wy-d3-fsD"/>
+                            <constraint firstItem="ftz-Jl-PT0" firstAttribute="leading" secondItem="EqQ-SA-Y09" secondAttribute="leading" id="7gN-bu-5XG"/>
+                            <constraint firstItem="EqQ-SA-Y09" firstAttribute="top" secondItem="ftz-Jl-PT0" secondAttribute="bottom" constant="8" id="Fhu-HJ-nUl"/>
+                            <constraint firstItem="gmf-ac-7UF" firstAttribute="leading" secondItem="FjF-ZH-k1G" secondAttribute="leading" id="JJP-Tj-Vae"/>
+                            <constraint firstItem="ftz-Jl-PT0" firstAttribute="trailing" secondItem="EqQ-SA-Y09" secondAttribute="trailing" id="Luw-I0-qnN"/>
+                            <constraint firstItem="v79-xp-ge8" firstAttribute="trailing" secondItem="gmf-ac-7UF" secondAttribute="trailing" id="UHC-Ea-PK8"/>
+                            <constraint firstItem="v79-xp-ge8" firstAttribute="trailing" secondItem="Ts1-de-Ovp" secondAttribute="trailingMargin" id="Ui2-nc-SMn"/>
+                            <constraint firstItem="ftz-Jl-PT0" firstAttribute="top" secondItem="3aC-g5-V7a" secondAttribute="bottom" constant="8" id="ZFS-Eu-MNF"/>
+                            <constraint firstItem="gmf-ac-7UF" firstAttribute="trailing" secondItem="FjF-ZH-k1G" secondAttribute="trailing" id="aAN-hl-QCk"/>
+                            <constraint firstItem="3aC-g5-V7a" firstAttribute="top" secondItem="Rzw-h8-HuY" secondAttribute="top" id="aDV-WG-Rbe"/>
+                            <constraint firstItem="ftz-Jl-PT0" firstAttribute="leading" secondItem="Rzw-h8-HuY" secondAttribute="leading" id="eFf-IA-9q3"/>
+                            <constraint firstItem="Rzw-h8-HuY" firstAttribute="bottom" secondItem="FjF-ZH-k1G" secondAttribute="bottom" constant="20" id="fPp-o3-EpR"/>
+                            <constraint firstItem="EqQ-SA-Y09" firstAttribute="centerX" secondItem="gmf-ac-7UF" secondAttribute="centerX" id="gQt-gy-VK2"/>
+                            <constraint firstItem="3aC-g5-V7a" firstAttribute="leading" secondItem="Ts1-de-Ovp" secondAttribute="leadingMargin" id="s8B-Ee-w1F"/>
+                            <constraint firstItem="FjF-ZH-k1G" firstAttribute="top" secondItem="gmf-ac-7UF" secondAttribute="bottom" constant="8" id="u34-ko-tFv"/>
+                            <constraint firstItem="3aC-g5-V7a" firstAttribute="baseline" secondItem="v79-xp-ge8" secondAttribute="baseline" id="uKb-1V-6Bn"/>
+                            <constraint firstItem="gmf-ac-7UF" firstAttribute="top" secondItem="EqQ-SA-Y09" secondAttribute="bottom" constant="8" id="xLD-IL-zE4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rzw-h8-HuY"/>
                     </view>
                     <connections>

@@ -71,34 +71,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YTQ-bv-4gt">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTQ-bv-4gt">
                                 <rect key="frame" x="0.0" y="147" width="375" height="52"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="04q-MX-4dm"/>
+                                </constraints>
                             </pickerView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pBh-Gk-u06">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pBh-Gk-u06">
                                 <rect key="frame" x="16" y="249" width="343" height="378"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.94627727591311994" green="0.94627727591311994" blue="0.94627727591311994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.94502562280000002" green="0.94513875250000001" blue="0.94498711820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="KhZ-gO-QJZ">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="KhZ-gO-QJZ">
                                 <rect key="frame" x="0.0" y="78" width="375" height="61"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="az1-yk-Ui6"/>
+                                </constraints>
                             </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Label" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rkw-Wn-hyS">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Label" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rkw-Wn-hyS">
                                 <rect key="frame" x="16" y="207" width="343" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YTQ-bv-4gt" firstAttribute="centerX" secondItem="Rkw-Wn-hyS" secondAttribute="centerX" id="0tF-5G-T5p"/>
+                            <constraint firstItem="Rkw-Wn-hyS" firstAttribute="leading" secondItem="kHi-f0-EeY" secondAttribute="leadingMargin" id="5n2-WJ-Q7s"/>
+                            <constraint firstItem="Yhx-by-tSl" firstAttribute="bottom" secondItem="pBh-Gk-u06" secondAttribute="bottom" constant="40" id="7ol-2S-95B"/>
+                            <constraint firstItem="pBh-Gk-u06" firstAttribute="top" secondItem="Rkw-Wn-hyS" secondAttribute="bottom" constant="8" id="M9m-Vd-NuQ"/>
+                            <constraint firstItem="Rkw-Wn-hyS" firstAttribute="top" secondItem="YTQ-bv-4gt" secondAttribute="bottom" constant="8" id="PHu-BP-AD0"/>
+                            <constraint firstItem="YTQ-bv-4gt" firstAttribute="top" secondItem="KhZ-gO-QJZ" secondAttribute="bottom" constant="8" id="YrQ-ou-916"/>
+                            <constraint firstItem="Rkw-Wn-hyS" firstAttribute="trailing" secondItem="pBh-Gk-u06" secondAttribute="trailing" id="Z32-q5-Kqz"/>
+                            <constraint firstItem="Rkw-Wn-hyS" firstAttribute="trailing" secondItem="kHi-f0-EeY" secondAttribute="trailingMargin" id="Zaw-Ra-J86"/>
+                            <constraint firstItem="KhZ-gO-QJZ" firstAttribute="leading" secondItem="YTQ-bv-4gt" secondAttribute="leading" id="btv-mw-jH9"/>
+                            <constraint firstItem="KhZ-gO-QJZ" firstAttribute="trailing" secondItem="YTQ-bv-4gt" secondAttribute="trailing" id="c1A-gV-qdg"/>
+                            <constraint firstItem="KhZ-gO-QJZ" firstAttribute="leading" secondItem="Yhx-by-tSl" secondAttribute="leading" id="iGv-fc-Bhv"/>
+                            <constraint firstItem="KhZ-gO-QJZ" firstAttribute="top" secondItem="Yhx-by-tSl" secondAttribute="top" constant="34" id="iuA-ap-HDD"/>
+                            <constraint firstItem="Rkw-Wn-hyS" firstAttribute="leading" secondItem="pBh-Gk-u06" secondAttribute="leading" id="lt0-bM-pQh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Yhx-by-tSl"/>
                     </view>
                     <navigationItem key="navigationItem" id="uRY-oG-l4q">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="YgA-QJ-MBF">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="YgA-QJ-MBF">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VnM-gB-AoD">
                                 <rect key="frame" x="313" y="0.0" width="46" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -115,7 +132,7 @@
                         <outlet property="label" destination="Rkw-Wn-hyS" id="Cie-Eu-ydg"/>
                         <outlet property="status" destination="YTQ-bv-4gt" id="DGW-t4-SlD"/>
                         <outlet property="text" destination="pBh-Gk-u06" id="qnC-6I-m1F"/>
-                        <outlet property="update" destination="YgA-QJ-MBF" id="ZAc-A1-sTg"/>
+                        <outlet property="update" destination="VnM-gB-AoD" id="hC2-iB-NYA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7r4-Ej-G5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

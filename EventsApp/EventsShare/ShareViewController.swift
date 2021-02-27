@@ -100,7 +100,9 @@ class ShareViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                     guard error == nil else { return }
                     
                     if let text = data as? String {
-                        self.text.text = text
+                        DispatchQueue.main.async {
+                            self.text.text = text
+                        }
                     } else {
                         fatalError("Impossible to get text")
                     }
